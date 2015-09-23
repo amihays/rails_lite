@@ -40,7 +40,7 @@ module Phase5
       return nil unless www_encoded_form
       arr = URI::decode_www_form(www_encoded_form)
 
-      arr.each do |pair| # @params[pair[0]] = pair[1]
+      arr.each do |pair|
         keys_array = parse_key(pair[0])
         current = @params
         keys_array[0...-1].each do |key|
